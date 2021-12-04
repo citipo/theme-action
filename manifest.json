@@ -1,0 +1,19 @@
+{
+    "name": {
+        "en": "Consultation",
+        "fr": "Consultation"
+    },
+    "description": {
+        "en": "A theme designed to organize online consultations.",
+        "fr": "Un thème conçu pour organiser des consultations en ligne",
+    },
+    "thumbnail": "thumbnail.jpg",
+    "templates": {
+        "style": "src/style.css.twig",
+        "script": "src/script.js.twig",
+        "head": "src/head.html.twig",
+        "home": "src/home.html.twig",
+        "list": "src/list.html.twig",
+        "content": "src/content.html.twig"
+    }
+}
