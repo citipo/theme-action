@@ -1,5 +1,6 @@
 <div class="home">
-    <div class="home-jumbo" {% if jumbo_image %}style="background-image: url('{{ jumbo_image }}');"{% endif %}>
+    <div class="home-jumbo"
+         style="background-image: url('{{ jumbo_image|default(citipo_theme_asset_url('assets/home-default.jpg')) }}');">
         {% if jumbo_overlay %}
             <div class="home-jumbo-overlay"></div>
         {% endif %}
