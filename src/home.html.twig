@@ -9,13 +9,13 @@
             <div class="home-jumbo-intro">
                 <div class="home-jumbo-intro-view">
                     <h2>
-                        {{ jumbo_title }}
+                        {{ jumbo_title|default('Representing Civic Tech at the European scale') }}
                     </h2>
 
                     <div class="home-jumbo-intro-split"></div>
 
                     <p>
-                        {{ jumbo_content|raw }}
+                        {{ jumbo_content|default('We are civictech companies representing the diversity of the sector. We help institutions to empower citizens and respond to the crisis of democracy. Meet our members !')|raw }}
                     </p>
                 </div>
             </div>
