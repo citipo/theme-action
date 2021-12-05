@@ -1,11 +1,20 @@
 {
     "name": {
-        "en": "Consultation",
-        "fr": "Consultation"
+        "en": "Action",
+        "fr": "Action"
     },
     "description": {
-        "en": "A theme designed to organize online consultations.",
-        "fr": "Un thème conçu pour organiser des consultations en ligne"
+        "en": "The main image takes the whole screen and highlights the call to actions. The last menu item is shaped for action.",
+        "fr": "L'image principale prend la totalité de l'écran et met en avant les boutons d'action. Le dernier item du menu est conçu pour l'action."
+    },
+    "defaultColors": {
+        "primary": "3A4F74",
+        "secondary": "82c383",
+        "third": "3A4F74"
+    },
+    "defaultFonts": {
+        "title": "Asap Condensed",
+        "text": "Open Sans"
     },
     "thumbnail": "thumbnail.jpg",
     "templates": {
