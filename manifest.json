@@ -24,5 +24,8 @@
         "home": "src/home.html.twig",
         "list": "src/list.html.twig",
         "content": "src/content.html.twig"
-    }
+    },
+    "assets": [
+        "assets/home-default.jpg"
+    ]
 }
