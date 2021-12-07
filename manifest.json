@@ -26,6 +26,8 @@
         "content": "src/content.html.twig"
     },
     "assets": [
+        "assets/bg-menu.svg",
+        "assets/bg-posts.png",
         "assets/home-default.jpg"
     ]
 }

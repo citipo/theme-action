@@ -9,37 +9,30 @@
             <div class="home-jumbo-intro">
                 <div class="home-jumbo-intro-view">
                     <h2>
-                        {{ jumbo_title|default('Representing Civic Tech at the European scale') }}
+                        {{ jumbo_title|default('Budget participatif de la Ville de Paris') }}
                     </h2>
 
                     <div class="home-jumbo-intro-split"></div>
 
                     <p>
-                        {{ jumbo_content|default('We are civictech companies representing the diversity of the sector. We help institutions to empower citizens and respond to the crisis of democracy. Meet our members !')|raw }}
+                        {{ jumbo_content|default('Un quart des investissements de la Ville de Paris est décidé avec les Parisiennes et les Parisiens. Le budget participatif est l’un des outils pour faire le Paris de demain.')|raw }}
                     </p>
+
+                    {% if blocks[0] is defined and blocks[0].type == 'cta' %}
+                        <div class="home-jumbo-buttons">
+                            {{ blocks[0].content|raw }}
+                        </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
     </div>
 
     {% for key, block in blocks %}
-        {% if 'home-about-us' in block.content %}
-            <div class="home-about-us">
-                <div class="home-about-us-left">
-                    {{ block.content|raw }}
-                </div>
-                <div class="home-about-us-right"></div>
-            </div>
-        {% elseif 'home-join' in block.content %}
-            <div class="home-join">
-                <div class="home-join-view">
-                    {{ block.content|raw }}
-                </div>
-            </div>
-        {% else %}
-            <div class="home-blocks">
+        {% for key, block in blocks %}
+            {% if key != 0 or block.type != 'cta' %}
                 {{ block.content|raw }}
-            </div>
-        {% endif %}
+            {% endif %}
+        {% endfor %}
     {% endfor %}
 </div>
