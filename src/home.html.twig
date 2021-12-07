@@ -28,11 +28,13 @@
         </div>
     </div>
 
-    {% for key, block in blocks %}
+    <div class="home-blocks">
         {% for key, block in blocks %}
-            {% if key != 0 or block.type != 'cta' %}
-                {{ block.content|raw }}
-            {% endif %}
+            {% for key, block in blocks %}
+                {% if key != 0 or block.type != 'cta' %}
+                    {{ block.content|raw }}
+                {% endif %}
+            {% endfor %}
         {% endfor %}
-    {% endfor %}
+    </div>
 </div>
