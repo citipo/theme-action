@@ -21,6 +21,9 @@
         "style": "src/style.css.twig",
         "script": "src/script.js.twig",
         "head": "src/head.html.twig",
+        "layout": "src/layout.html.twig",
+        "header": "src/header.html.twig",
+        "footer": "src/footer.html.twig",
         "home": "src/home.html.twig",
         "list": "src/list.html.twig",
         "content": "src/content.html.twig"
