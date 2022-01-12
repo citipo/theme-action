@@ -24,9 +24,18 @@
         "layout": "src/layout.html.twig",
         "header": "src/header.html.twig",
         "footer": "src/footer.html.twig",
-        "home": "src/home.html.twig",
         "list": "src/list.html.twig",
-        "content": "src/content.html.twig"
+        "content": "src/content.html.twig",
+        "home": "src/home.html.twig",
+        "home-calls-to-action": "src/home/calls-to-action.html.twig",
+        "home-custom-content": "src/home/custom-content.html.twig",
+        "home-newsletter": "src/home/newsletter.html.twig",
+        "home-posts": "src/home/posts.html.twig",
+        "home-socials": "src/home/socials.html.twig",
+        "manifesto-list": "src/manifesto/list.html.twig",
+        "manifesto-view": "src/manifesto/view.html.twig",
+        "trombinoscope-list": "src/trombinoscope/list.html.twig",
+        "trombinoscope-view": "src/trombinoscope/view.html.twig"
     },
     "assets": [
         "assets/bg-menu.svg",

@@ -1,0 +1,17 @@
+<div class="home-blocks-block home-blocks-block-cta">
+    {% if primary.label %}
+        <a href="{{ primary.target }}"
+           class="home-blocks-block-cta-button home-blocks-block-cta-primary"
+           {% if primary.openNewTab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            {{ primary.label }}
+        </a>
+    {% endif %}
+
+    {% if secondary.label %}
+        <a href="{{ secondary.target }}"
+           class="home-blocks-block-cta-button home-blocks-block-cta-secondary"
+           {% if secondary.openNewTab %}target="_blank" rel="noopener noreferrer"{% endif %}>
+            {{ secondary.label }}
+        </a>
+    {% endif %}
+</div>
