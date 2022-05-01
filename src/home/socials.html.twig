@@ -1,31 +1,53 @@
 {% if facebook_url or twitter_url %}
-    <div class="home-blocks-block home-blocks-block-socials">
-        <h3 class="home-blocks-block-title">
-            {{ socials_title }}
-        </h3>
+    <div data-aos="fade-up" data-aos-duration="600">
+        <div class="home-blocks-block home-blocks-block-socials">
+            <h3 class="home-blocks-block-title">
+                {{ socials_title }}
+            </h3>
 
-        <div class="row justify-content-center justify-content-lg-start">
-            {% if facebook_url %}
-                <div class="col-lg-auto home-blocks-block-socials-facebook">
-                    <div class="home-blocks-block-socials-block box-offset d-inline-block d-md-none">
-                        <iframe src="https://www.facebook.com/plugins/page.php?href={{ facebook_url }}&amp;tabs=timeline&amp;width=280&amp;height=600&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=219062691446351" width="280" height="500" style="border:none;overflow:hidden;width:280px;" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+            <div class="row justify-content-center justify-content-lg-start">
+                {% if facebook_url %}
+                    <div class="col-lg-6 home-blocks-block-socials-facebook">
+                        <div class="home-blocks-block-socials-block" {{ stimulus_controller('embed-consent', {
+                            'type': 'facebook',
+                            'url': facebook_url,
+                            'titleLabel': titleLabel,
+                            'descriptionLabel': descriptionLabel,
+                            'acceptLabel': acceptLabel,
+                            'externalLabel': externalLabel,
+                            'cancelLabel': cancelLabel,
+                        }) }}>
+                            <div class="p-3">
+                                <a href="{{ facebook_url }}" target="_blank" rel="noreferrer noopener">
+                                    <i class="fa fa-external-link mr-1"></i>
+                                    {{ facebook_url }}
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="home-blocks-block-socials-block box-offset d-none d-md-inline-block">
-                        <iframe src="https://www.facebook.com/plugins/page.php?href={{ facebook_url }}&amp;tabs=timeline&amp;width=500&amp;height=600&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=219062691446351" width="500" height="600" style="border:none;overflow:hidden;width:500px;" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
-                    </div>
-                </div>
-            {% endif %}
+                {% endif %}
 
-            {% if twitter_url %}
-                <div class="col-lg-6 home-blocks-block-socials-twitter">
-                    <div class="home-blocks-block-socials-block box-offset">
-                        <a class="twitter-timeline" data-height="600"
-                           href="{{ twitter_url }}">{{ twitter_label }}</a>
-
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                {% if twitter_url %}
+                    <div class="col-lg-6 home-blocks-block-socials-twitter">
+                        <div class="home-blocks-block-socials-block" {{ stimulus_controller('embed-consent', {
+                            'type': 'twitter-timeline',
+                            'url': twitter_url,
+                            'titleLabel': titleLabel,
+                            'descriptionLabel': descriptionLabel,
+                            'acceptLabel': acceptLabel,
+                            'externalLabel': externalLabel,
+                            'cancelLabel': cancelLabel,
+                        }) }}>
+                            <div class="p-3">
+                                <a href="{{ twitter_url }}" target="_blank" rel="noreferrer noopener">
+                                    <i class="fa fa-external-link mr-1"></i>
+                                    {{ twitter_url }}
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            {% endif %}
+                {% endif %}
+            </div>
         </div>
     </div>
 {% endif %}
