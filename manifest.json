@@ -31,6 +31,7 @@
         "home-custom-content": "src/home/custom-content.html.twig",
         "home-newsletter": "src/home/newsletter.html.twig",
         "home-posts": "src/home/posts.html.twig",
+        "home-events": "src/home/events.html.twig",
         "home-socials": "src/home/socials.html.twig",
         "manifesto-list": "src/manifesto/list.html.twig",
         "manifesto-view": "src/manifesto/view.html.twig",
